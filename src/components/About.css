@@ -21,8 +21,8 @@
     rgba(255,255,255,0.02)
   );
 
-  backdrop-filter:blur(16px);
-  -webkit-backdrop-filter:blur(16px); /* ✅ FIX */
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px); /* ✅ FIX */
 
   border-radius:20px;
   padding:50px 30px;
