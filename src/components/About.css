@@ -15,22 +15,24 @@
   max-width:800px;
   width:100%;
 
+  position:relative;
+  overflow:hidden;
+
+  /* 🔥 FAKE BLUR EFFECT */
   background:linear-gradient(
     145deg,
-    rgba(255,255,255,0.06),
-    rgba(255,255,255,0.02)
+    rgba(2,6,23,0.7),
+    rgba(15,23,42,0.6)
   );
-
-  backdrop-filter:blur(20px);
-  -webkit-backdrop-filter:blur(20px); /* ✅ FIX */
-
+  
+  backdrop-filter:blur(10px);
   border-radius:20px;
+  
   padding:50px 30px;
 
-  border:1px solid rgba(255,255,255,0.08);
+  border:1px solid rgba(56,189,248,0.12);
 
-  transition:0.4s;
-  box-shadow:0 10px 40px rgba(0,0,0,0.3);
+  box-shadow:0 10px 40px rgba(0,0,0,0.5);
 }
 
 .about-container:hover{
@@ -45,12 +47,18 @@
   font-weight:700;
   margin-bottom:25px;
 
+  /* ✅ fallback color (IMPORTANT) */
+  color:#38bdf8;
+
   background:linear-gradient(90deg,#38bdf8,#0ea5e9,#38bdf8);
   background-size:200% auto;
 
+  /* ✅ standard property */
+  background-clip:text;
+
+  /* ✅ webkit support */
   -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent; /* ✅ FIX */
-  color:transparent;
+  -webkit-text-fill-color:transparent;
 
   animation:shine 4s linear infinite;
 }
@@ -120,11 +128,14 @@
   font-size:1.3rem;
   margin-bottom:5px;
 
+  /* ✅ fallback */
+  color:#38bdf8;
+
   background:linear-gradient(90deg,#38bdf8,#0ea5e9);
 
+  background-clip:text;
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
-  color:#38bdf8; /* fallback */
 }
 
 .stat-card p{
