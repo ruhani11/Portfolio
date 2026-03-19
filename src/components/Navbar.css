@@ -1,0 +1,73 @@
+/* NAVBAR */
+
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+
+  padding:18px 10%;
+
+  background:transparent;              /* transparent at top */
+  transition:all 0.3s ease;
+
+  z-index:1000;
+}
+
+/* SCROLLED STATE */
+
+.navbar.scrolled{
+  background:rgba(2,6,23,0.9);
+  backdrop-filter:blur(12px);
+  box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+/* LINKS */
+
+.nav-links{
+  list-style:none;
+  display:flex;
+  gap:35px;
+}
+
+/* NAV ITEMS */
+
+.nav-links li{
+  color:#e2e8f0;
+  font-size:0.95rem;
+  font-weight:500;
+  cursor:pointer;
+  position:relative;
+  transition:0.3s;
+}
+
+/* HOVER + ACTIVE COLOR */
+
+.nav-links li:hover,
+.nav-links li.active{
+  color:#38bdf8;
+}
+
+/* UNDERLINE */
+
+.nav-links li::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0%;
+  height:2px;
+  background:#38bdf8;
+  transition:0.3s;
+}
+
+/* HOVER + ACTIVE UNDERLINE */
+
+.nav-links li:hover::after,
+.nav-links li.active::after{
+  width:100%;
+}

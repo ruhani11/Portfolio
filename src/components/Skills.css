@@ -1,0 +1,119 @@
+#skills{
+  padding:120px 10%;
+  text-align:center;
+  position:relative;
+  z-index:1;
+}
+
+/* 🔥 ANIMATED HEADING */
+
+#skills h2{
+  font-size:2.8rem;
+  font-weight:700;
+  margin-bottom:60px;
+  letter-spacing:1px;
+
+  background:linear-gradient(90deg, #38bdf8, #0ea5e9, #38bdf8);
+  background-size:200% auto;
+
+   background-clip:text;
+  -webkit-background-clip:text;
+
+   color:transparent;
+  -webkit-text-fill-color:transparent;
+
+  text-shadow:0 0 20px rgba(56,189,248,0.3);
+
+  animation:shine 4s linear infinite, floatText 3s ease-in-out infinite;
+}
+
+/* gradient animation */
+
+@keyframes shine{
+  to{
+    background-position:200% center;
+  }
+}
+
+/* floating effect */
+
+@keyframes floatText{
+  0%{ transform:translateY(0px); }
+  50%{ transform:translateY(-5px); }
+  100%{ transform:translateY(0px); }
+}
+
+/* 🔥 CLEAN GRID */
+
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(120px, 140px));
+  gap:25px;
+  justify-content:center;
+}
+
+/* 🔥 CARD */
+
+.skill-card{
+  height:120px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.08);
+
+  transition:all 0.3s ease;
+}
+
+/* 🔥 HOVER */
+
+.skill-card:hover{
+  transform:translateY(-8px) scale(1.05);
+  box-shadow:0 15px 30px rgba(56,189,248,0.3);
+}
+
+/* ICON */
+
+.skill-card svg{
+  font-size:30px;
+  color:#38bdf8;
+  margin-bottom:8px;
+  transition:0.3s;
+}
+
+/* ICON GLOW */
+
+.skill-card:hover svg{
+  transform:scale(1.2);
+  filter:drop-shadow(0 0 8px #38bdf8);
+}
+
+/* TEXT */
+
+.skill-card p{
+  font-size:0.8rem;
+  color:#cbd5f5;
+  transition:0.3s;
+}
+
+.skill-card:hover p{
+  color:white;
+}
+
+/* 🔥 OPTIONAL: subtle floating cards */
+
+.skill-card{
+  animation:cardFloat 6s ease-in-out infinite;
+}
+
+@keyframes cardFloat{
+  0%{ transform:translateY(0px); }
+  50%{ transform:translateY(-4px); }
+  100%{ transform:translateY(0px); }
+}

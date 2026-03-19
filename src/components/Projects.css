@@ -1,0 +1,158 @@
+#projects{
+  padding:110px 10%;
+  text-align:center;
+  position:relative;
+  z-index:1;
+}
+
+/* 🔥 HEADING (GLOW + FLOAT + SHINE) */
+
+#projects h2{
+  font-size:2.8rem;
+  font-weight:700;
+  margin-bottom:60px;
+  letter-spacing:1px;
+
+  background:linear-gradient(90deg,#38bdf8,#0ea5e9,#38bdf8);
+  background-size:200% auto;
+
+  background-clip:text;
+  -webkit-background-clip:text;
+
+  color:transparent;
+  -webkit-text-fill-color:transparent;
+
+  text-shadow:0 0 20px rgba(56,189,248,0.3);
+
+  animation:shine 4s linear infinite, floatText 3s ease-in-out infinite;
+}
+
+/* 🔥 GRADIENT SHINE */
+
+@keyframes shine{
+  to{
+    background-position:200% center;
+  }
+}
+
+/* 🔥 FLOAT */
+
+@keyframes floatText{
+  0%{ transform:translateY(0px); }
+  50%{ transform:translateY(-6px); }
+  100%{ transform:translateY(0px); }
+}
+
+/* 🔥 GRID */
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:35px;
+}
+
+/* 🔥 CARD */
+
+.project-card{
+  background:linear-gradient(
+    145deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.02)
+  );
+
+  backdrop-filter:blur(12px);
+
+  border-radius:18px;
+  padding:20px;
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  text-align:left;
+  cursor:pointer;
+
+  position:relative;
+  overflow:hidden;
+
+  transition:transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* 🔥 IMAGE */
+
+.project-card img{
+  width:100%;
+  border-radius:10px;
+  margin-bottom:15px;
+  transition:0.5s ease;
+}
+
+/* 🔥 TITLE */
+
+.project-card h3{
+  margin-bottom:10px;
+  font-size:1.2rem;
+  font-weight:600;
+  color:white;
+}
+
+/* 🔥 DESCRIPTION */
+
+.project-card p{
+  color:#cbd5f5;
+  font-size:0.95rem;
+  line-height:1.6;
+}
+
+/* 🔥 HOVER */
+
+.project-card:hover{
+  transform:translateY(-12px) scale(1.03);
+  box-shadow:0 20px 60px rgba(56,189,248,0.35);
+}
+
+/* 🔥 IMAGE ZOOM */
+
+.project-card:hover img{
+  transform:scale(1.06);
+}
+
+/* 🔥 GLOW BORDER */
+
+.project-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:18px;
+  padding:1px;
+
+  background:linear-gradient(120deg,transparent,#38bdf8,transparent);
+  opacity:0;
+  transition:0.4s;
+}
+
+.project-card:hover::before{
+  opacity:1;
+}
+
+/* 🔥 LIGHT SWEEP */
+
+.project-card::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+
+  background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.15),
+    transparent
+  );
+
+  transition:0.7s;
+}
+
+.project-card:hover::after{
+  left:100%;
+}
