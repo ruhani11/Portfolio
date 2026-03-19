@@ -12,6 +12,9 @@ html, body, #root{
   width:100%;
   height:100%;
 }
+html,body{
+  overflow-x: hidden;
+}
 
 /* 🔥 BODY */
 
@@ -34,5 +37,5 @@ section{
   z-index:1;
   scroll-margin-top:90px;
   max-width:100%;
-  overflow:hidden;
+  overflow: visible;
 }
