@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import "./Projects.css";
 
 import spendwise from "../assests/spendwise.png";
@@ -8,58 +9,65 @@ import ngo from "../assests/ngo.png";
 import news from "../assests/news.png";
 import restoration from "../assests/restoration.png";
 
-export default function Projects(){
-
+export default function Projects() {
   const projects = [
     {
       title: "SpendWise",
+      type: "Full-Stack Shopping & Budget Management System",
       img: spendwise,
-      desc: "Budget tracking and shopping management app with ₹ expense monitoring.",
-      link: "https://github.com/ruhani11/SpendWise"
+      desc: "A full-stack shopping and budget management app with active-list handling, category-wise totals, budget tracking, duplicate checks, and responsive dashboards.",
+      stack: ["React.js", "Node.js", "Express.js", "MongoDB"],
+      link: "https://github.com/ruhani11/SpendWise",
     },
     {
       title: "Fintrack AI",
+      type: "Smart Budget Tracker",
       img: fintrack,
-      desc: "AI‑powered financial tracker providing insights, graphs and analysis.",
-      link: "https://github.com/ruhani11/Fintrack_ai"
+      desc: "A personal finance assistant for tracking income, expenses, monthly summaries, transaction history, and AI-powered budget improvement tips.",
+      stack: ["Flask", "Streamlit", "SQLite", "OpenRouter AI"],
+      link: "https://github.com/ruhani11/Fintrack_ai",
     },
     {
       title: "NGO Resource Management",
+      type: "Database Management System",
       img: ngo,
-      desc: "Full‑stack system to manage volunteers, donations and inventory.",
-      link: "https://github.com/ruhani11/NGO-Resources-Management-System"
+      desc: "A resource management system for NGOs to manage volunteers, donations, inventory records, search filters, and real-time MySQL updates.",
+      stack: ["Python", "MySQL", "Streamlit", "SQL"],
+      link: "https://github.com/ruhani11/NGO-Resources-Management-System",
     },
     {
-      title: "News Summarizer",
+      title: "Hindi-English News Summarizer",
+      type: "NLP Translation & Summarization Pipeline",
       img: news,
-      desc: "NLP system translating Hindi news and generating summaries.",
-      link: "https://github.com/ruhani11/Hindi-English-News-Translator-Summarizer"
+      desc: "A cross-lingual NLP pipeline that scrapes Hindi news, translates it into English using MarianMT, and summarizes it using BART.",
+      stack: ["Python", "Flask", "MarianMT", "BART"],
+      link: "https://github.com/ruhani11/Hindi-English-News-Translator-Summarizer",
     },
     {
-      title: "Image Restoration",
+      title: "Heritage Image Restoration",
+      type: "Generative AI Restoration Pipeline",
       img: restoration,
-      desc: "AI model restoring damaged historical photographs.",
-      link: "https://github.com/ruhani11/Historical-Image-Restoration"
-    }
+      desc: "A diffusion-based restoration pipeline using Stable Diffusion and ControlNet to enhance old historical photographs and heritage building images.",
+      stack: ["Stable Diffusion", "ControlNet", "Gradio", "OpenCV"],
+      link: "https://github.com/ruhani11/Historical-Image-Restoration",
+    },
   ];
 
-  /* 🔥 smooth stagger */
   const container = {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.3
-      }
-    }
+        staggerChildren: 0.18,
+      },
+    },
   };
 
-  /* 🔥 slow smooth slide */
   const card = {
     hidden: {
       opacity: 0,
-      y: 120,
-      scale: 0.95,
-      filter: "blur(8px)"
+      y: 90,
+      scale: 0.96,
+      filter: "blur(8px)",
     },
     visible: {
       opacity: 1,
@@ -67,23 +75,28 @@ export default function Projects(){
       scale: 1,
       filter: "blur(0px)",
       transition: {
-        duration: 1,
-        ease: [0.22, 1, 0.36, 1]
-      }
-    }
+        duration: 0.85,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
   };
 
-  return(
+  return (
     <section id="projects">
-
-      <motion.h2
-        initial={{ opacity: 0, y: 50 }}
+      <motion.div
+        className="projects-header"
+        initial={{ opacity: 0, y: 45 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.7 }}
         viewport={{ once: true }}
       >
-        Projects
-      </motion.h2>
+        <p className="projects-tag">Featured Work</p>
+        <h2>Projects Built Like Real Products</h2>
+        <p className="projects-subtitle">
+          Full-stack, database-driven, and AI-powered projects designed with
+          practical workflows, clean UI, and real-world use cases.
+        </p>
+      </motion.div>
 
       <motion.div
         className="projects-grid"
@@ -92,27 +105,54 @@ export default function Projects(){
         whileInView="visible"
         viewport={{ once: true, margin: "-120px" }}
       >
-
         {projects.map((project, index) => (
           <motion.div
             key={index}
             className="project-card"
             variants={card}
-            whileHover={{ y: -12, scale: 1.03 }}
-            onClick={() => window.open(project.link, "_blank")}
+            whileHover={{ y: -10 }}
           >
+            <div className="project-image-box">
+              <img src={project.img} alt={project.title} />
 
-            <img src={project.img} alt={project.title} />
+              <div className="project-image-overlay">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaGithub />
+                  View Repository
+                  <FaExternalLinkAlt className="external-icon" />
+                </a>
+              </div>
+            </div>
 
-            <h3>{project.title}</h3>
+            <div className="project-content">
+              <p className="project-type">{project.type}</p>
+              <h3>{project.title}</h3>
+              <p className="project-desc">{project.desc}</p>
 
-            <p>{project.desc}</p>
+              <div className="project-stack">
+                {project.stack.map((tech, i) => (
+                  <span key={i}>{tech}</span>
+                ))}
+              </div>
 
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                <FaGithub />
+                GitHub
+                <FaExternalLinkAlt className="external-icon" />
+              </a>
+            </div>
           </motion.div>
         ))}
-
       </motion.div>
-
     </section>
   );
 }

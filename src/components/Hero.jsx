@@ -43,6 +43,26 @@ export default function Hero() {
             <span>REST APIs</span>
           </div>
 
+          {/* Mobile-only compact developer terminal */}
+          <div className="mobile-dev-terminal">
+            <div className="mobile-terminal-header">
+              <span></span>
+              <span></span>
+              <span></span>
+              <p>mobile.dev.js</p>
+            </div>
+
+            <pre className="mobile-terminal-pre">
+              <code>
+{`const ruhani = {
+  role: "Full Stack Developer",
+  stack: ["React", "Node", "APIs"],
+  status: "Open to roles",
+};`}
+              </code>
+            </pre>
+          </div>
+
           <div className="hero-links">
             <a href="#projects" className="primary-btn">
               View Projects

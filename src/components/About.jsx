@@ -3,8 +3,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import "./About.css";
 
-export default function About(){
-
+export default function About() {
   const [count, setCount] = useState(0);
   const [started, setStarted] = useState(false);
 
@@ -12,110 +11,104 @@ export default function About(){
     if (started) return;
     setStarted(true);
 
-    setTimeout(() => {
-      let start = 0;
-      const end = 5;
-      const duration = 1500;
-      const stepTime = duration / end;
+    let start = 0;
+    const end = 5;
+    const duration = 1500;
+    const stepTime = duration / end;
 
-      const timer = setInterval(() => {
-        start++;
-        setCount(start);
-        if (start === end) clearInterval(timer);
-      }, stepTime);
-    }, 600);
+    const timer = setInterval(() => {
+      start++;
+      setCount(start);
+
+      if (start === end) {
+        clearInterval(timer);
+      }
+    }, stepTime);
   };
 
-  /* 🔥 animation */
   const item = {
     hidden: {
       opacity: 0,
-      y: 100,
-      filter: "blur(10px)"
+      y: 80,
+      filter: "blur(8px)",
     },
     visible: {
       opacity: 1,
       y: 0,
       filter: "blur(0px)",
       transition: {
-        duration: 1,
-        ease: [0.25, 0.1, 0.25, 1]
-      }
-    }
+        duration: 0.9,
+        ease: [0.25, 0.1, 0.25, 1],
+      },
+    },
   };
 
-  return(
+  return (
     <section id="about">
+      <motion.div
+        className="about-container"
+        variants={item}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+      >
+        <div className="about-left">
+          <p className="section-tag">About Me</p>
 
-      <div className="about-container">
+          <h2>
+            Building practical software with clean UI, APIs, and scalable logic.
+          </h2>
 
-        {/* 🔥 HEADING */}
-        <motion.h2
-          className="floating-text"
-          variants={item}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          About Me
-        </motion.h2>
+          <p className="about-desc">
+            I am a Software Engineer and Full Stack Developer with hands-on
+            experience in building responsive web applications, REST APIs,
+            authentication workflows, and database-driven systems.
+          </p>
 
-        {/* 🔥 PARA 1 */}
-        <motion.p
-          className="floating-text"
-          variants={item}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          I am an Electronics & Computer Engineering student passionate about
-          building modern web applications and intelligent AI solutions.
-          I enjoy working on full‑stack development and exploring advanced
-          technologies to solve real‑world problems.
-        </motion.p>
+          <p className="about-desc">
+            My technical work includes React.js, Node.js, Express.js, Flask,
+            MongoDB, MySQL, SQLite, and Mongoose. I also have a strong foundation
+            in Data Structures and Algorithms, Object-Oriented Programming,
+            DBMS, Operating Systems, and full-stack application architecture.
+          </p>
 
-        {/* 🔥 PARA 2 */}
-        <motion.p
-          className="floating-text"
-          variants={item}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          I have developed multiple projects including AI‑powered systems,
-          financial tools, and scalable applications. I am always eager to
-          learn, improve my problem‑solving skills, and build impactful solutions.
-        </motion.p>
+          <div className="about-highlights">
+            <span>Frontend Development</span>
+            <span>REST API Integration</span>
+            <span>Authentication Workflows</span>
+            <span>Database Systems</span>
+          </div>
+        </div>
 
-        {/* 🔥 STATS */}
         <motion.div
-          className="about-stats"
+          className="about-right"
           variants={item}
           initial="hidden"
           whileInView="visible"
           onViewportEnter={startCounter}
           viewport={{ once: true, margin: "-50px" }}
         >
+          <div className="stat-card featured">
+            <h3>{count}+</h3>
+            <p>Projects Built</p>
+          </div>
 
           <div className="stat-card">
-            <h3>{count}+</h3>
-            <p>Projects</p>
+            <h3>3</h3>
+            <p>Internship Experiences</p>
           </div>
 
           <div className="stat-card">
             <h3>Full Stack</h3>
-            <p>Development</p>
+            <p>Development Focus</p>
           </div>
 
           <div className="stat-card">
             <h3>AI / ML</h3>
-            <p>Focus</p>
+            <p>Research Exposure</p>
           </div>
-
         </motion.div>
-
-      </div>
-
+      </motion.div>
     </section>
   );
 }
