@@ -515,7 +515,7 @@
 /* TABLET / 768px HERO CUT FIX */
 /* ========================= */
 
-@media (min-width: 431px) and (max-width: 768px) {
+@media (min-width: 430px) and (max-width: 768px) {
   .hero {
     width: 100%;
     min-height: auto !important;
