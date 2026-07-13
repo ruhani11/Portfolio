@@ -16,7 +16,7 @@ export default function Experience() {
       icon: <FaLaptopCode />,
       desc: "Built SpendWise — a production-deployed full-stack shopping list and budget management app — end-to-end as my primary internship deliverable, alongside company website development and API integration work.",
       points: [
-        "Built SpendWise (spendwise12.com) end-to-end — 5 modules: Authentication, Shopping Lists, Products, Categories, Units of Measure.",
+        "Built SpendWise end-to-end — 5 modules: Authentication, Shopping Lists, Products, Categories, Units of Measure.",
         "Designed and shipped 20+ REST API endpoints with structured error handling across 5 MongoDB collections.",
         "Implemented 5 authentication flows: JWT login, OTP email verification, Google OAuth, signup, and password reset.",
         "Set up GitHub Actions CI/CD with frontend on Vercel, backend on Render, and MongoDB Atlas as the database layer.",
