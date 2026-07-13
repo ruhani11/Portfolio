@@ -20,7 +20,9 @@ export default function Hero() {
               1800,
               "React.js Developer",
               1800,
-              "Backend & API Developer",
+              "MERN Stack Developer",
+              1800,
+              "AI/ML Enthusiast",
               1800,
             ]}
             wrapper="h2"
@@ -29,9 +31,13 @@ export default function Hero() {
           />
 
           <p className="hero-desc">
-            I build responsive web applications, REST APIs, authentication
-            workflows, and database-driven systems using React.js, Node.js,
-            Express.js, Flask, MongoDB, MySQL, and SQLite.
+            B.E. in Electronics and Computer Engineering from Thapar Institute
+            of Engineering and Technology. I build production-deployed full-stack
+            web applications, REST APIs, authentication workflows, and
+            database-driven systems using React.js, Node.js, Express.js, Flask,
+            MongoDB, MySQL, and SQLite. I also work on ML and Generative AI
+            pipelines — from EEG-based neurological classification to LLM-powered
+            finance tools and Stable Diffusion image restoration.
           </p>
 
           <div className="tech-stack">
@@ -41,6 +47,8 @@ export default function Hero() {
             <span>Flask</span>
             <span>MongoDB</span>
             <span>REST APIs</span>
+            <span>Machine Learning</span>
+            <span>Generative AI</span>
           </div>
 
           {/* Mobile-only compact developer terminal */}
@@ -113,10 +121,12 @@ export default function Hero() {
 {`const developer = {
   name: "Ruhani Bhatia",
   role: "Full Stack Developer",
+  education: "B.E. ENC, Thapar Institute",
   frontend: ["React.js", "HTML", "CSS"],
   backend: ["Node.js", "Express.js", "Flask"],
   database: ["MongoDB", "MySQL", "SQLite"],
-  focus: "Building scalable web apps",
+  aiml: ["Scikit-learn", "Hugging Face", "Stable Diffusion"],
+  focus: "Building scalable full-stack + AI-driven apps",
 };
 
 console.log("Ready to create impact.");`}

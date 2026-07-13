@@ -12,16 +12,10 @@ body{
   overflow-x:hidden;
 }
 
-/* 🔥 MAIN WRAPPER (IMPORTANT FOR FIXED NAVBAR) */
-
-main{
-  padding-top:80px; /* 👈 prevents overlap with navbar */
-}
-
 /* 🔥 NAVBAR */
 
 .navbar{
-  position:fixed;
+  position:sticky;
   top:0;
   left:0;
   width:100%;

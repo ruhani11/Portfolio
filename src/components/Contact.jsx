@@ -77,7 +77,7 @@ export default function Contact() {
               &nbsp;&nbsp;role: <span>"Software Engineer"</span>,
             </p>
             <p>
-              &nbsp;&nbsp;focus: <span>"Full Stack Development"</span>,
+              &nbsp;&nbsp;focus: <span>"Full Stack Development & AI/ML"</span>,
             </p>
             <p>
               &nbsp;&nbsp;status: <span>"Open to Opportunities"</span>,

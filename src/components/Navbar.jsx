@@ -12,7 +12,7 @@ export default function Navbar(){
   };
 
   useEffect(() => {
-    const sections = ["about", "skills", "projects", "contact"];
+    const sections = ["about", "experience", "skills", "projects", "contact"];
 
     const handleScroll = () => {
       // active section
@@ -46,6 +46,13 @@ export default function Navbar(){
           onClick={() => scrollToSection("about")}
         >
           About
+        </li>
+
+        <li
+          className={active === "experience" ? "active" : ""}
+          onClick={() => scrollToSection("experience")}
+        >
+          Experience
         </li>
 
         <li

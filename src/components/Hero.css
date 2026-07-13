@@ -1,12 +1,13 @@
 .hero {
   width: 100%;
   min-height: 100vh;
-  padding: 120px 7% 70px;
+  height: auto;
+  margin-top: 40px;
+  padding: 60px 7% 80px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  overflow: hidden;
   z-index: 1;
 }
 
@@ -253,7 +254,7 @@
 /* Tablet */
 @media (max-width: 1024px) {
   .hero {
-    padding-top: 115px;
+    padding-top: 50px;
   }
 
   .hero-content {
@@ -284,7 +285,7 @@
 /* Mobile */
 @media (max-width: 768px) {
   .hero {
-    padding: 120px 22px 85px;
+    padding: 50px 22px 60px;
   }
 
   .hero-badge {
@@ -337,7 +338,7 @@
     width: 100%;
     min-height: auto !important;
     height: auto !important;
-    padding: 145px 16px 105px !important;
+    padding: 50px 16px 70px !important;
     align-items: flex-start;
     overflow: visible !important;
   }
@@ -487,7 +488,7 @@
 /* Extra Small Mobile */
 @media (max-width: 360px) {
   .hero {
-    padding: 135px 14px 105px !important;
+    padding: 45px 14px 70px !important;
   }
 
   .hero h1 {
@@ -520,7 +521,7 @@
     width: 100%;
     min-height: auto !important;
     height: auto !important;
-    padding: 145px 22px 110px !important;
+    padding: 50px 22px 70px !important;
     align-items: flex-start;
     overflow: visible !important;
   }
@@ -607,7 +608,7 @@
   .hero {
     min-height: auto !important;
     height: auto !important;
-    padding: 115px 6% 95px !important;
+    padding: 45px 6% 70px !important;
     overflow: visible !important;
     align-items: center;
   }
@@ -716,7 +717,7 @@
   .hero {
     min-height: auto !important;
     height: auto !important;
-    padding: 150px 7% 115px !important;
+    padding: 50px 7% 80px !important;
     overflow: visible !important;
     align-items: center;
   }
@@ -773,5 +774,18 @@
 
   .mobile-dev-terminal {
     display: none !important;
+  }
+}
+
+/* ========================= */
+/* WIDE DESKTOP (>1366px) NAVBAR SPACING */
+/* ========================= */
+
+@media (min-width: 1367px) {
+  .hero {
+    min-height: 100vh;
+    height: auto;
+    align-items: center;
+    padding-top: 60px;
   }
 }

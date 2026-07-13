@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import {
   FaBriefcase,
   FaLaptopCode,
-  FaDatabase,
   FaBrain,
 } from "react-icons/fa";
 import "./Experience.css";
@@ -12,17 +11,18 @@ export default function Experience() {
   const experiences = [
     {
       role: "Full Stack Software Developer Intern",
-      company: "SK Info Techies",
-      duration: "Jan 2026 – Present",
+      company: "SK Info Techies, Noida",
+      duration: "Jan 2026 – Jun 2026",
       icon: <FaLaptopCode />,
-      desc: "Worked on full-stack development tasks involving frontend components, backend APIs, authentication workflows, database connectivity, and scalable application layouts.",
+      desc: "Built SpendWise — a production-deployed full-stack shopping list and budget management app — end-to-end as my primary internship deliverable, alongside company website development and API integration work.",
       points: [
-        "Completed 3 development tasks using React.js, Node.js, Express.js, MongoDB, and Mongoose.",
-        "Created 10+ frontend components and responsive interfaces for scalable application layouts.",
-        "Integrated 5+ REST API modules with frontend workflows, database connectivity, and testing.",
-        "Applied authentication workflows using JWT, bcrypt, OTP, Google OAuth, and protected routes.",
+        "Built SpendWise (spendwise12.com) end-to-end — 5 modules: Authentication, Shopping Lists, Products, Categories, Units of Measure.",
+        "Designed and shipped 20+ REST API endpoints with structured error handling across 5 MongoDB collections.",
+        "Implemented 5 authentication flows: JWT login, OTP email verification, Google OAuth, signup, and password reset.",
+        "Set up GitHub Actions CI/CD with frontend on Vercel, backend on Render, and MongoDB Atlas as the database layer.",
+        "Collaborated with 2+ senior developers across 10+ code reviews and validated all endpoints via Postman.",
       ],
-      tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Mongoose"],
+      tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Google OAuth"],
     },
     {
       role: "Web Development Intern",
@@ -31,24 +31,26 @@ export default function Experience() {
       icon: <FaBriefcase />,
       desc: "Built an accessible web-based Sign Language Dictionary to support learning, improve content discovery, and enhance user engagement through responsive UI design.",
       points: [
-        "Built an accessible Sign Language Dictionary with 1,500+ sign entries for learning support.",
-        "Designed 10+ responsive interfaces with structured content, search functionality, and navigation.",
-        "Improved user engagement by 40% through UI/UX enhancements and frontend optimization.",
+        "Built a single-page Sign Language Dictionary web app for deaf students and teachers with 1,500+ entries.",
+        "Extracted 1,500+ sign language videos via a Python scraping script, with metadata stored using Google Sheets API.",
+        "Delivered real-time search functionality, reducing content lookup time by ~50%.",
+        "Validated search accuracy across all entries and tested responsiveness on 3+ screen sizes.",
       ],
-      tech: ["Web Development", "Responsive UI", "Search", "Accessibility", "UI/UX"],
+      tech: ["HTML5", "CSS3", "JavaScript", "Python", "Google Sheets API"],
     },
     {
       role: "Summer Research Intern",
       company: "Thapar Institute of Engineering and Technology",
       duration: "Jun 2024 – Aug 2024",
       icon: <FaBrain />,
-      desc: "Worked on research-oriented machine learning workflows involving EEG preprocessing, feature extraction, and neural network-based classification.",
+      desc: "Worked on research-oriented machine learning workflows for EEG-based ADHD/ASD classification — from preprocessing and feature engineering to model training and evaluation.",
       points: [
-        "Prepared EEG preprocessing and feature extraction pipelines using Python and signal processing techniques.",
-        "Collaborated with a research team on FCNN model training for ADHD, ASD, and control classification.",
-        "Achieved 95.77% classification accuracy using a Feedforward Fully Connected Neural Network.",
+        "Achieved 95.77% accuracy (precision 95.90%, recall 95.68%) with an FCNN on multi-class neurological classification.",
+        "Engineered Python-based ML pipelines across 2 clinical datasets covering 136 subjects.",
+        "Applied ICA, EMD, and ATAR artifact removal for preprocessing, with ATAR performing best by SNR/RMSE/correlation.",
+        "Applied SHAP for feature selection and compared 4 models: CNN1D, XGBoost, FCNN, and CNN+LSTM.",
       ],
-      tech: ["Python", "Signal Processing", "EEG", "FCNN", "Machine Learning"],
+      tech: ["Python", "Scikit-learn", "SHAP", "Pandas", "NumPy"],
     },
   ];
 

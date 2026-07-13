@@ -12,7 +12,7 @@ export default function About() {
     setStarted(true);
 
     let start = 0;
-    const end = 5;
+    const end = 6;
     const duration = 1500;
     const stepTime = duration / end;
 
@@ -56,20 +56,26 @@ export default function About() {
           <p className="section-tag">About Me</p>
 
           <h2>
-            Building practical software with clean UI, APIs, and scalable logic.
+            Building practical software with clean UI, scalable APIs, and AI-driven systems.
           </h2>
 
           <p className="about-desc">
-            I am a Software Engineer and Full Stack Developer with hands-on
-            experience in building responsive web applications, REST APIs,
-            authentication workflows, and database-driven systems.
+            I'm a 2026 B.E. graduate in Electronics and Computer Engineering
+            from Thapar Institute of Engineering and Technology, Patiala
+            (CGPA 7.98/10). I'm a Software Engineer and Full Stack Developer
+            with hands-on experience building production-deployed web
+            applications, REST APIs, authentication workflows, and
+            database-driven systems.
           </p>
 
           <p className="about-desc">
-            My technical work includes React.js, Node.js, Express.js, Flask,
-            MongoDB, MySQL, SQLite, and Mongoose. I also have a strong foundation
-            in Data Structures and Algorithms, Object-Oriented Programming,
-            DBMS, Operating Systems, and full-stack application architecture.
+            My technical work spans React.js, Node.js, Express.js, Flask,
+            MongoDB, MySQL, SQLite, and Mongoose, alongside Machine Learning
+            and Generative AI — including EEG-based classification research
+            (95.77% accuracy), NLP pipelines, and Stable Diffusion image
+            restoration. I've completed 3 internships, built 6 projects, and
+            worked across the full stack from database schema design to
+            deployed, CI/CD-integrated production systems.
           </p>
 
           <div className="about-highlights">
@@ -77,6 +83,7 @@ export default function About() {
             <span>REST API Integration</span>
             <span>Authentication Workflows</span>
             <span>Database Systems</span>
+            <span>Machine Learning & GenAI</span>
           </div>
         </div>
 
@@ -104,8 +111,8 @@ export default function About() {
           </div>
 
           <div className="stat-card">
-            <h3>AI / ML</h3>
-            <p>Research Exposure</p>
+            <h3>95.77%</h3>
+            <p>ML Classification Accuracy</p>
           </div>
         </motion.div>
       </motion.div>

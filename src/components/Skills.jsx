@@ -11,6 +11,8 @@ import {
   FaCode,
   FaServer,
   FaGitAlt,
+  FaAws,
+  FaRobot,
 } from "react-icons/fa";
 
 import {
@@ -22,6 +24,10 @@ import {
   SiCplusplus,
   SiPostman,
   SiGithub,
+  SiVercel,
+  SiRender,
+  SiScikitlearn,
+  SiOpencv,
 } from "react-icons/si";
 
 import "./Skills.css";
@@ -45,9 +51,9 @@ export default function Skills() {
       icon: <FaReact />,
       skills: [
         { icon: <FaReact />, name: "React.js" },
-        { icon: <SiJavascript />, name: "JavaScript" },
-        { icon: <FaCode />, name: "HTML" },
-        { icon: <FaCode />, name: "CSS" },
+        { icon: <SiJavascript />, name: "JavaScript (ES6+)" },
+        { icon: <FaCode />, name: "HTML5" },
+        { icon: <FaCode />, name: "CSS3" },
       ],
     },
     {
@@ -66,10 +72,21 @@ export default function Skills() {
       command: "database.query()",
       icon: <FaDatabase />,
       skills: [
-        { icon: <SiMongodb />, name: "MongoDB" },
+        { icon: <SiMongodb />, name: "MongoDB Atlas" },
         { icon: <SiMysql />, name: "MySQL" },
         { icon: <FaDatabase />, name: "SQLite" },
         { icon: <FaDatabase />, name: "Mongoose" },
+      ],
+    },
+    {
+      title: "AI / ML & GenAI",
+      command: "model.train()",
+      icon: <FaBrain />,
+      skills: [
+        { icon: <SiScikitlearn />, name: "Scikit-learn" },
+        { icon: <FaRobot />, name: "Hugging Face" },
+        { icon: <SiOpencv />, name: "OpenCV" },
+        { icon: <FaBrain />, name: "SHAP" },
       ],
     },
     {
@@ -81,6 +98,17 @@ export default function Skills() {
         { icon: <FaCode />, name: "OOP" },
         { icon: <FaDatabase />, name: "DBMS" },
         { icon: <FaServer />, name: "Operating Systems" },
+      ],
+    },
+    {
+      title: "Cloud & DevOps",
+      command: "deploy.run()",
+      icon: <FaAws />,
+      skills: [
+        { icon: <FaAws />, name: "AWS (basics)" },
+        { icon: <SiVercel />, name: "Vercel" },
+        { icon: <SiRender />, name: "Render" },
+        { icon: <SiGithub />, name: "GitHub Actions CI/CD" },
       ],
     },
     {
@@ -106,10 +134,11 @@ export default function Skills() {
         viewport={{ once: true }}
       >
         <p className="skills-tag">Technical Stack</p>
-        <h2>Skills Built for Full-Stack Development</h2>
+        <h2>Skills Built for Full-Stack & AI-Driven Development</h2>
         <p className="skills-subtitle">
           A practical tech stack covering frontend development, backend APIs,
-          databases, core computer science, and developer tools.
+          databases, machine learning & generative AI, cloud deployment, and
+          developer tools.
         </p>
       </motion.div>
 
